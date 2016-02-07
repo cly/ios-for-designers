@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="2389" y="1154"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Sign in again-->
         <scene sceneID="XT8-ff-3Ai">
             <objects>
-                <navigationController id="mKL-74-1fA" sceneMemberID="viewController">
+                <navigationController id="mKL-74-1fA" userLabel="Sign in again" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WmI-rM-WhE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -481,6 +481,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="he7-lG-Ud5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="NDc-Ux-GIh" kind="modal" id="vcT-Xz-pjh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -542,13 +545,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="HYo-qT-z6b">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="521"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="457"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="settings" id="dfh-zi-ose">
-                                        <rect key="frame" x="0.0" y="65" width="320" height="772"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="772"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VsI-B5-fXn">
+                                        <rect key="frame" x="264" y="0.0" width="48" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <segue destination="8ec-2p-ae2" kind="modal" id="Fed-p3-8aB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -661,7 +672,9 @@
         <image name="welcome3" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cO6-8B-E5Z"/>
+        <segue reference="Fed-p3-8aB"/>
+        <segue reference="vcT-Xz-pjh"/>
         <segue reference="GRa-KB-40E"/>
+        <segue reference="cO6-8B-E5Z"/>
     </inferredMetricsTieBreakers>
 </document>
