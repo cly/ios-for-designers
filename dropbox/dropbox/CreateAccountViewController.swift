@@ -1,5 +1,5 @@
 //
-//  CreateAccountRootViewController.swift
+//  CreateAccountViewController.swift
 //  dropbox
 //
 //  Created by Charlie Yuan on 2/7/16.
@@ -8,12 +8,9 @@
 
 import UIKit
 
-class CreateAccountRootViewController: UIViewController {
+class CreateAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        performSegueWithIdentifier("createAccountSegue", sender: self)
-        
     }
-
 }
