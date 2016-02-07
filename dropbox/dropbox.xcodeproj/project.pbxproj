@@ -14,6 +14,8 @@
 		2B0A6C9E1C67E2DB00B529C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0A6C9C1C67E2DB00B529C2 /* LaunchScreen.storyboard */; };
 		2B0A6CA91C67E2DB00B529C2 /* dropboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A6CA81C67E2DB00B529C2 /* dropboxTests.swift */; };
 		2B0A6CB41C67E2DB00B529C2 /* dropboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A6CB31C67E2DB00B529C2 /* dropboxUITests.swift */; };
+		2B0A6CC61C67EC7B00B529C2 /* SignInRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A6CC51C67EC7B00B529C2 /* SignInRootViewController.swift */; };
+		2B0A6CC81C67EE3600B529C2 /* CreateAccountRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A6CC71C67EE3600B529C2 /* CreateAccountRootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2B0A6CAF1C67E2DB00B529C2 /* dropboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dropboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0A6CB31C67E2DB00B529C2 /* dropboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropboxUITests.swift; sourceTree = "<group>"; };
 		2B0A6CB51C67E2DB00B529C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B0A6CC51C67EC7B00B529C2 /* SignInRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRootViewController.swift; sourceTree = "<group>"; };
+		2B0A6CC71C67EE3600B529C2 /* CreateAccountRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountRootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				2B0A6C9A1C67E2DB00B529C2 /* Assets.xcassets */,
 				2B0A6C9C1C67E2DB00B529C2 /* LaunchScreen.storyboard */,
 				2B0A6C9F1C67E2DB00B529C2 /* Info.plist */,
+				2B0A6CC51C67EC7B00B529C2 /* SignInRootViewController.swift */,
+				2B0A6CC71C67EE3600B529C2 /* CreateAccountRootViewController.swift */,
 			);
 			path = dropbox;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0A6CC81C67EE3600B529C2 /* CreateAccountRootViewController.swift in Sources */,
+				2B0A6CC61C67EC7B00B529C2 /* SignInRootViewController.swift in Sources */,
 				2B0A6C961C67E2DB00B529C2 /* ViewController.swift in Sources */,
 				2B0A6C941C67E2DB00B529C2 /* AppDelegate.swift in Sources */,
 			);
