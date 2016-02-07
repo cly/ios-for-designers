@@ -14,7 +14,7 @@ Time spent: **3** hours spent in total
 
 Here's a walkthrough of implemented user stories:
 
-<img src='/dropbox.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./dropbox.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 
