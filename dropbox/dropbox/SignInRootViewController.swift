@@ -12,5 +12,7 @@ class SignInRootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        performSegueWithIdentifier("signInSegue", sender: self)
+
     }
 }
