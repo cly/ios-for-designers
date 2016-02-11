@@ -440,14 +440,17 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yzl-Cx-Vf8" userLabel="loginButton">
-                                        <rect key="frame" x="13" y="132" width="293" height="52"/>
+                                        <rect key="frame" x="14" y="132" width="293" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="login_button_enabled"/>
                                         <state key="disabled" image="login_button_disabled"/>
                                         <state key="selected" image="logging_in_button"/>
+                                        <connections>
+                                            <action selector="onLoginClick:" destination="1lE-HZ-0Yc" eventType="touchUpInside" id="Uhd-ia-j3x"/>
+                                        </connections>
                                     </button>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" id="Sn4-e9-QGw" userLabel="WhiteActivityIndicator">
-                                        <rect key="frame" x="150" y="148" width="20" height="20"/>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="Sn4-e9-QGw" userLabel="spinner">
+                                        <rect key="frame" x="260" y="148" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
                                 </subviews>
@@ -461,9 +464,14 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="email" destination="QDP-dl-e8O" id="jJL-y3-MqH"/>
                         <outlet property="fieldParentView" destination="5b3-rk-D9H" id="qhG-Sf-Woz"/>
                         <outlet property="labelParentView" destination="b4F-Qx-VBG" id="D16-ux-TZV"/>
+                        <outlet property="loginBtn" destination="Yzl-Cx-Vf8" id="Z4q-lq-Rnn"/>
                         <outlet property="logo" destination="Kct-Zi-czM" id="KRd-HN-0iY"/>
+                        <outlet property="password" destination="viz-Pj-UbS" id="M85-Ou-DzA"/>
+                        <outlet property="spinner" destination="Sn4-e9-QGw" id="l5q-nd-b5H"/>
+                        <segue destination="181-2M-Tzl" kind="modal" identifier="loggedInSegue" id="j1h-Vm-xYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2u-u8-t9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
