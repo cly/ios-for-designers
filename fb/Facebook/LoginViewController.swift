@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        
+        self.loginBtn.enabled = false
         fieldParentViewInitialY = fieldParentView.frame.origin.y
         labelParentViewInitialY = labelParentView.frame.origin.y
         logoInitialY = logo.frame.origin.y
@@ -80,6 +80,15 @@ class LoginViewController: UIViewController {
         delay(2) {
             self.checkPassword()
         }
-        
     }
+    
+    @IBAction func checkInput(sender: UITextField) {
+        
+        if (self.email.text!.isEmpty || self.password.text!.isEmpty) {
+            self.loginBtn.enabled = false
+        } else {
+            self.loginBtn.enabled = true
+        }
+    }
+    
 }
