@@ -10,26 +10,41 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var fieldParentView: UIView!
+    @IBOutlet weak var labelParentView: UIView!
+    @IBOutlet weak var logo: UIImageView!
+    
+    var fieldParentViewInitialY: CGFloat!
+    var labelParentViewInitialY: CGFloat!
+    var logoInitialY: CGFloat!
+
+    let fieldParentViewOffset: CGFloat! = -50.0
+    let labelParentViewOffset: CGFloat! = -210.0
+    let logoOffset: CGFloat! = -10.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        fieldParentViewInitialY = fieldParentView.frame.origin.y
+        labelParentViewInitialY = labelParentView.frame.origin.y
+        logoInitialY = logo.frame.origin.y
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func keyboardWillShow(notification: NSNotification!) {
+        fieldParentView.frame.origin.y = fieldParentViewInitialY + fieldParentViewOffset
+        labelParentView.frame.origin.y = labelParentViewInitialY + labelParentViewOffset
+        logo.frame.origin.y = logoInitialY + logoOffset
     }
-    */
-
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        fieldParentView.frame.origin.y = fieldParentViewInitialY
+        labelParentView.frame.origin.y = labelParentViewInitialY
+        logo.frame.origin.y = logoInitialY
+    }
+    
+    @IBAction func didTap(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }
